@@ -8,7 +8,7 @@ Npm install the thingy :
 
     npm install gulp-dotenv-to-json;
 
-Do something like this in your gulpfile.js
+Do something like this in your gulpfile.js. Use case : I only want to copy the 'SERVER', key of my dotenv to the json. If you want to copy your whole dotenv you can always put keys : ['*'];
 
     var dotenvToJson = require ('gulp-dotenv-to-json');
     gulp.task('dotenvToJson', function(){
@@ -28,7 +28,8 @@ Using elixir ? put the code above in your gulpfile and then :
     }
 
 
-Licence :
+
+## Licence
 
 The MIT License (MIT)
 Copyright (c) 2016 to Léo TOMAS

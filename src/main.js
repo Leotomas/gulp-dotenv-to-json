@@ -5,6 +5,11 @@ function validateParams(params) {
             throw attrs[i]+' must be truthy';
         }
     }
+
+    if (!params.paths.env || !params.paths.jenv) {
+        throw "one of the paths is missing. The params.env object must include the env and jenv attribute";
+    }
+
     return true;
 }
 
