@@ -22,16 +22,14 @@ m.copy = function(params) {
     var paths = params.paths;
     var fileContent = fs.readFileSync(paths.env, 'utf8');
     var lines = fileContent.split('\n');
-    var o = [];
+    var o = {};
     for (var i in lines) {
         if (lines[i] === '') {
             continue;
         }
         var content = lines[i].split('=');
         if (keys.indexOf(content[0]) != -1 || keys.indexOf('*') != -1) {
-            var p = {};
-            p[content[0]] = content[1];
-            o.push(p);
+            o[content[0]] = content[1];
         }
     }
     fs.writeFile(paths.jenv, JSON.stringify(o));
