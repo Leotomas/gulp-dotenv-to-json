@@ -2,7 +2,7 @@
   "name": "gulp-dotenv-to-json",
   "version": "1.0.0",
   "description": "Make a partial copy of a dotenv file to a json file to be used by front-end js ",
-  "main": src/"main.js",
+  "main" : "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
